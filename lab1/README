@@ -1,0 +1,79 @@
+
+This README includes a short overview of the example1.cl script
+   provided in this repository, plus the requirements for the
+   lab 1 take home exercise (due exactly 6 days after the start
+   of your registered lab session).
+
+Supplied file: example1.cl
+--------------------------
+
+example1.cl is an executable script that prompts the user to enter
+   an integer, checks the data entered is indeed an integer, and
+   (if so) displays its square.  
+
+   The script demonstrates the creation and use of a 'main' function
+   in lisp, and can be run with the command
+      ./example1.cl
+
+Lab requirements:
+-----------------
+
+Create an executable lisp script named lab1.cl to hold your lab code
+   (make sure you get the name EXACTLY correct, all lower-case)
+
+Note: you can make the script executable using the command
+   chmod u+x lab1.cl
+and you can then run your script using the command
+   ./lab1.cl
+
+Your script must define a function named summation that takes three parameters.
+The function returns the sum of all the parameters whose values are numeric,
+    defaulting to 0 if none of the parameters are numeric.
+e.g.  (summation 1 2 3) would return 6
+      (summation nil 25.4  "foo") would return 25.4
+      (summation "x" "y" "z") would return 0
+The function should NOT produce any output (i.e. no error messages).
+
+Your script must define a function named classify that takes one parameter,
+  and displays a message indicating if the parameter supplied is a number,
+  a string, a list, or 'something else'.   The results of several sample calls are
+  illustrated below:
+     (classify 3.5)      ; displays "3.5 is a number"
+     (classify '(1 2 3)) ; displays "(1 2 3) is a list"
+     (classify "hello")  ; displays "hello is a string"
+     (classify #\Q)      ; displays "#\Q is something else"
+
+Your script must define a function named main that does the following:
+  1. uses a let block to declare three local variables
+  2. prompts the user to enter three numbers
+  3. reads the user's responses, storing them in the three variables
+  4. calls the classify function on each of the three variables, in order
+  5. calls the summation function, passing it the three variables,
+     and displaying the values entered and results in the format:
+        "The sum of X, Y, and Z is: A"
+     (where X, Y, and Z are the three values entered, whether they are
+      numeric or not, and A is the value returned by summation).
+
+Finally, your script must call your main function.
+
+Sample run:
+-----------
+(The sample run below shows the user entering 13 "abc" and (1 2)
+ as their three values.)
+
+   Please enter three numbers:
+   13 "abc" (1 2)
+   13 is a number
+   abc is a string
+   (1 2) is a list
+   The sum of 13, abc, and (1 2) is: 13
+
+Submitting the lab:
+-------------------
+
+To submit the lab for grading, be sure to perform all the following once your lab is complete:
+
+   git add lab1.cl
+   git commit -m "completed lab1"
+   git push
+

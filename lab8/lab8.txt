@@ -1,0 +1,83 @@
+SAMI AL-QUSUS
+
+  lab8: answers to questions (1) through (5) for files lab8a.c through lab8h.c
+  ----------------------------------------------------------------------------
+(1) 
+lab8a.c: compiled cleanly
+lab8b.c: compiled cleanly
+lab8c.c: compiled cleanly
+lab8d.c: compiled but with warnings and failed to compile due to errors
+lab8e.c: compiled cleanly
+lab8f.c: compiled cleanly
+lab8g.c: compiled but with warnings
+lab8h.c: compiled cleanly
+
+(2)
+lab8d.c: failed because we are trying to assign a value to a "variable increment" operation.
+code to fix:
+    z++ = y;
+    ++z = y;
+     
+fix:
+     z++;
+     z=y;
+     ++z;
+     z=y;
+
+(3)
+none crashed
+
+(4)
+--------------------
+lab8a.c: 
+L:1 =>
+whats happening is that i1 * i1 is stored in something like int tmp which results in overflow then assigned to long L
+i2:0 => 
+whats happening here is that L=1 therefore the result ends up bieng a long decimal that doesnt fit in int i2
+---------------------
+lab8b.c: 
+L2:-9223372036854775808 =>
+this results because there is an overflow trying to assign a double to a long 
+--------------------
+lab8c.c:
+z -3 =>
+this happens because -> int y, x = y=3, z=(printf("hi there\n"),-y);//z skips the prinf because there is a comma
+
+and life the universe and everything is.. 42 of course =>
+this happens because -> int TheAnswer = printf("and life the universe and everything is.. ") //gives the number of characters frintf gives
+-------------------
+lab8d.c:
+no results because we didnt ask for an output of any of the variables
+-------------------
+lab8e.c:
+result is 99 because f(p) subtracts one from k that its pointing to then g(p) multiplies that k that now is 9 by 10 then f(p) is added to g(p) resulting in 99
+-------------------
+lab8f.c:
+(2 && 4) is true //this is true because any int not 0 is true 
+(2 & 4) is false //because & is Bitwise Operators in C it changes 2 and 4 to bits and returns 0 for when they dont match or match to 0 ,and outputs 1 when they both have bit 1
+                 //therefore it will result in 01 which is false
+(2 || 4) is true //this is true because because any int not 0 is true, therefore true or true is true
+(2 | 4) is not false // | in C will or bits of both integers, it changes 2 and 4 to bits and returns 0 for when they are both 0 ,and outputs 1 when they either one has bit 1
+(2 && 3) is true //this is true because any int not 0 is true
+(2 & 3) is not false // because & is Bitwise Operators in C it changes 2 and 4 to bits and returns 0 for when they dont match or match to 0 ,and outputs 1 when they both have bit 1
+                     // therefore it will result in 00 which is false
+---------------------
+lab8g.c:
+whats happening is because compare operators are binary operators they first do first operation from left to right then its seen result as boolean 0 or 1
+then that 0 or 1 is compared to last variable or number. for our exmple 0 and 1 are always less than 7 therefore we get true which is 1 therefore all outputs are 1
+---------------------
+lab8h.c:
+result: 23 =>
+what happens is x = f(x++, g(&x)) //here x++ doent actually chnage anything because its incremented after the function takes the 10 which is useless in that position, 
+then g chnages x to 11 and retruns that to f then in f it inrements both side then returns that which is 23
+---------------------
+(5)
+------------------
+lab8c.c:  dangerous programming practice -> x = y=3
+------------------
+lab8e.c: its dangerous to -> k = f(p) + g(p); because they are both chnaging the value of p on same line, better put them on different lines to better see order of operation. maybe like this:
+	int tempA = f(p);  //this will change and subtract 1 from variable p points to
+        int tempB = fg(p); //this will change and multiply current p by 10
+	k = tempA + tempB; //this adds first change to k plus second change 
+-----------------
+note: i didnt really explain outputs that are obvious like if an int i = 1; and the output is 1

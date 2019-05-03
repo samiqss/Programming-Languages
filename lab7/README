@@ -1,0 +1,47 @@
+
+This README provides the specifications for the lab 7 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+Lab requirements:
+-----------------
+
+For this lab you will be experimenting with various C programs
+to answer each of the questions below.
+
+Twelve programs, lab7a.c through lab7L.c, are provided,
+along with a makefile.
+
+Put your answers to the questions in file lab7.txt.
+
+(1) For each of the programs, when compiled with gcc -Wall, indicate whether they
+      - compiled cleanly
+      - compiled but with warnings
+      - failed to compile (generated errors)
+
+(2) For those that failed to compile, what was the root cause of the problem?
+       If there is a simple/reasonable fix to eliminate the error, briefly
+       describe what that fix would be.
+
+(3) Of the programs from part (1) that did compile (cleanly or not),
+       which ones caused a runtime crash and why?  Be as clear as possible
+       about the root cause of the problem, and if there is a simple/reasonable
+       fix to eliminate the crash briefly describe what the fix would be.
+
+(4) Of the programs from part (1) that did compile (cleanly or not) and
+       ran without crashing, which ones resulted in a loss of data and why?
+
+(5) Of the assignment statements from part (1) that compiled cleanly, ran
+       without a crash, and caused no loss of data,  which ones (if any)
+       would you regard as a dangerous programming practice?
+       Justify your answer.
+
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 7 completed"
+   git push
+

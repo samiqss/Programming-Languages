@@ -1,0 +1,65 @@
+
+This README provides the specifications for the lab 3 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+Lab requirements:
+-----------------
+
+Create an executable lisp script named lab3.cl to hold your lab code
+   (make sure you get the name EXACTLY correct, all lower-case)
+
+Your script must define a function named final, which takes a single parameter, L:
+   a list of lists. The function returns a list consisting of the results of
+   calling function last of each list in L.
+   For example:
+      (final '((1 2 3) (10 20 30 40) (2 4)) would return ((3) (40) (4))
+      (final '(nil (1)) would return (nil (1))
+      etc
+   If L is not a list of lists the function simply returns nil.
+   Implementation requiirement: final must (appropriately) use lisp's mapcar
+      function to build the result.
+
+Your script must define a function named firstN that takes two parameters:
+   a list, L, and a positive integer, N.
+   firstN then returns a list of the first N elements of L.  (If N is greater
+      than the length of L then it returns a list of all elements.)
+   The function returns nil if L is not a list or if N is not a positive integer.
+
+Your script must define a function named firsts that takes two parameters:
+   a list of lists, L, and a positive integer, N.
+   firsts then returns a list of lists, containing the first N elements
+      of each of the lists in L.
+   It returns nil if L is not a list of lists or if N is not a positive integer.
+   Implementation requirement: firsts must (appropriately) use lisp's
+       map function, passing it your firstN function, to build the result.
+   Hints: you may find the following handy to create a list of N's:
+      (make-list (length L) :initial-element N)
+
+Note: make sure your functions are named correctly (correct spelling,
+   correct case) and that they RETURN the expected value (having the
+   function simply display the value is not an acceptable substitute).
+
+Your script must define a function named main that prompts the user to
+  enter values for L and N, then calls and displays the results of
+  (firsts L N), followed by the results of (final (firsts L N))
+
+Finally, your script must call your main function.
+
+Testing:
+--------
+Again, two of the twelve marks for this lab will be for the demonstrating the
+degree to which you have tested your solution.
+
+Within your repository, create a subdirectory named Tests, and in that
+directory create the set of files used to test your lab3.cl script -
+each file should contain just the L and N values to be used.
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 3 completed"
+   git push
+

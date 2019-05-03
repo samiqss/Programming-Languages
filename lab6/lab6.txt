@@ -1,0 +1,15 @@
+
+   lab 6: analysis of C scope handling
+  -------------------------------------
+1. when a variable is defined and given a value, we cannot redefine it if the value is not coampatible with the new definition.
+2. global variables declared again within a block will be used by any call to them within the block
+3. declaring previous declared variables with a block of {} or function or conditions doesnt change values, address or pointers pointing to variables out of that block.
+4.But if pointer pointing to a variable called at function call and is changed by a call to the pointer within the function itself, this actually changes the value in the variable thats outside of the function.(so far im guesssing thats the case as long as we dont that the same variable defined and declared again with that scope of the function)
+5.within a scope of a function if a varibale call only points to the called variable and and there is no new declared variable within the scope of that function and there exists another global variable any change made to that variable will affect the global variable and not the called by refrence like in the previous note. BUT the change will only happen after we leave that function not instantly like what happened in the previous note (that is when called by refrence).
+6.do not pass a global constant to a funcion as call by refrence, you will get segmentation fault
+7.once you leave a function all local declared variables values are lost but that is not the case when leaving the a block, you call will still have the value in the address but you just cant change the value by a simple call of variable and chnaging the address but i since we have the address i guess we can chnage the value through the address directly even if out of the block.
+8.if a function call is made on a global variable, we cannot declare  varibale with the same name within the function, will get compilation error, x re-declared as diffent kind of symbol.
+9.To add to previous note, it is possible to declare a new variable with the same name if in a block in that function.
+10. Note: once of of scope the address for a previous pointer that was used in a function that we are out of will keep chnaging with every run, its like the program just has garbage values in there with every run some new garbage value.
+11. when an address used for a local variable in a function, it is possible to be used for another function when we are out of that function and we declare another local in another function even they dont have the same name (thats seen for the variable iterations)12.note that a varibale defined and declared in a loop will always be reassigned value we intially gave it until final iteration that is if it was changed before leaving loop.
+13.Final interesting notice that variables of condition statements/loops are lost after we exits that statements but thats not the case for a for loop or a do statements. 

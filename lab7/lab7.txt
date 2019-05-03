@@ -1,0 +1,50 @@
+Sami Al-Qusus
+CSCI330 - LAB7
+
+lab7: answers to questions (1) through (5) for files lab7a.c through lab7L.c
+----------------------------------------------------------------------------
+(1)
+lab7a - compiled but with warnings  
+lab7b - compiled but with warnings 
+lab7c - compiled cleanly
+lab7d - compiled cleanly
+lab7e - compiled cleanly
+lab7f - compiled but with warnings
+lab7g - compiled but with warnings
+lab7h - compiled cleanly
+lab7i - compiled cleanly
+lab7j - compiled cleanly
+lab7k - compiled cleanly
+lab7l - compiled cleanly
+----------------------------------------------------------------------------
+(2) none failed to compile.
+----------------------------------------------------------------------------
+(3)
+lab7c.c caused a runtime crash because p2 is a pointer to string not char array, one fix would be
+char str[10]; in the struct s definition 
+
+lab7d.c caused a runtime crash because we are attempting to change value of a const fix would be to declare x not const
+int x = 1;
+----------------------------------------------------------------------------
+(4)
+lab7a - resulted in data loss as variable c is a char while content of c are -200, which results in overflow because -200 is out of range
+
+lab7e - I am not sure if change to const is considered loss of data, but if it is its because 
+apprently we can chanage the value of a constant by pointer pointing to it in local scope
+
+lab7f - results in precision loss because long treats the number as an int an cuts off the decimal
+
+lab7g - resulted in data loss because of how printf uses the stack and what it takes out depending on type its given
+
+lab7i - resulted in data loss because divide sees 5 and 2 as int and its too late to chnage to float after
+
+----------------------------------------------------------------------------
+(5)
+lab7e - pointing to a variable in local scope has shown to be dangerous because it changes the value of a const
+
+lab7h - its dangerous programming practice to do this  while ((c = s[i++])) because it could loop forver
+
+lab7j - checking a condition by passing a variable that not 0 or 1, false or true is bad practice
+
+lab7L - enum vals third should be given a value at initialization because left like that its possible that it has a garbage value that might be used by mistake some how
+

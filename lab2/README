@@ -1,0 +1,86 @@
+
+This README provides the specifications for the lab 2 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+Lab requirements:
+-----------------
+
+Create an executable lisp script named lab2.cl to hold your lab code
+   (make sure you get the name EXACTLY correct, all lower-case)
+
+Your script must define a function named firstN that takes two parameters:
+      a list, L, and an integer, N
+   If L is not a list or N is not an integer the function returns L,
+      if N is less than 1 the function returns nil,
+      if N is greater than the length of L the function returns L,
+      otherwise the function returns a list of the first N elements of L
+   For example,
+      (firstN '(10 20 30) 2)    ; returns (10 20)
+      (firstN "hello" "there")  ; returns "hello"
+      (firstN '("foo") 3)       ; returns ("foo")
+
+Your script must define a function named lastN that takes two parameters:
+      a list, L, and a positive integer, N
+   lastN is similar to firstN, except that it returns the last N elements
+      of L, rather than the first N elements.
+
+Your script must define a function named rotateN that takes two parameters:
+      a list, L, and a positive integer, N
+   This function returns a copy of L, but with all elements rotated N positions
+      to the left, e.g.
+         (rotateN '(10 20 30) 1) returns (20 30 10),
+         (rotateN '(10 20 30) 2) returns (30 10 20),
+         (rotateN '(10 20 30) 3) returns (10 20 30),
+         (rotateN '(10 20 30) 4) returns (20 30 10),
+         etc
+   The function simply returns L in error cases, i.e.
+      if L is not a list, or if N is not a positive integer.
+
+Note: make sure your functions are named correctly (correct spelling,
+   correct case) and that they RETURN the expected value (having the
+   function simply display the value is not an acceptable substitute).
+
+Your script must define a function named main that prompts the user to
+  enter values for L and N, then calls each of the three functions
+  and displays the returned result.
+
+Finally, your script must call your main function.
+
+   Sample run:
+   -----------
+
+   Please enter the values for L and N:
+   (10 20 30)   2
+   firstN of (10 20 30) and 2 is: (10 20)
+   lastN of (10 20 30) and 2 is: (20 30)
+   rotateN of (10 20 30) and 2 is: (30 10 20)
+
+Testing:
+--------
+Of the 12 marks for this lab, 2 marks will be for the demonstrating the
+degree to which you have tested your solution.
+
+Within your repository, create a subdirectory named Tests, and in that
+directory create the set of files used to test your lab2.cl script -
+each file should contain just the L and N values to be used.
+
+For example, suppose you decided test1 would try the script on (1 2 3) and 2.
+You would create a file named test1 (in directory Tests) which simply contained
+ (1 2 3) 2
+To test your script, you could then run the command
+  ./lab2.cl < Tests/test1
+If correct, the resulting output would look something like
+   Please enter the values for L and N:
+   firstN of (1 2 3) and 2 is: (1 2)
+   lastN of (1 2 3) and 2 is: (2 3)
+   rotateN of (1 2 3) and 2 is: (3 1 2)
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 2 completed"
+   git push
+

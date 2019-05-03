@@ -1,0 +1,35 @@
+
+This README provides the specifications for the lab 5 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+Lab requirements:
+-----------------
+
+Create an executable lisp script named lab5.cl to hold your lab code
+   (make sure you get the name EXACTLY correct, all lower-case)
+
+This lab involves the creation and use of lisp macros.
+
+In this case, your script must define a defmacro named listtype
+   with the behaviour specified in the supplied lab5.cl file.
+
+As always make sure your macro is named correctly (correct spelling,
+   correct case) and that it expands to the expected code (again, as
+   detailed in lab5.cl)
+
+At the bottom of the lab5.cl file you will find a short sample call 
+that tries expanding/displaying and testing a use of your macro. 
+
+Your lab5.cl should be expanded to add additional tests of your macro -
+showing its expansion and use in a variety of test cases (using varying
+numbers of arguments and type checking functions).
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 5 completed"
+   git push
+

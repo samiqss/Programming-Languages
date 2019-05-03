@@ -1,0 +1,50 @@
+
+This README provides the specifications for the lab 4 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+Lab requirements:
+-----------------
+
+Create an executable lisp script named lab4.cl to hold your lab code
+   (make sure you get the name EXACTLY correct, all lower-case)
+
+This lab involves the use of closures: functions which create and
+   return other functions.
+
+In this case, your script must define a function named buildRotate
+   that takes a single parameter, N, and builds and returns a lambda
+   function which in turn expects a single parameter, L.  The lambda
+   function's return value would be the result of rotating L by N positions
+   (just as you did in lab 2's rotateN, but effectively with the
+   value of N built in, rather than taken as a parameter).
+   If N is not an integer or is less than 1 then the constructed lambda
+   function should simply return the L it was passed.
+
+As always, make sure your function is named correctly (correct spelling,
+   correct case) and that it RETURNS the expected value (having the
+   function simply display the value is not an acceptable substitute).
+
+Your script must define a function named main that prompts the user to
+  enter values for L and N, then calls buildRotate on N, then runs
+  the resulting lambda function on L and displays the returned result.
+
+Finally, your script must call your main function.
+
+Testing:
+--------
+Again, two of the twelve marks for the lab will be for the demonstrating the
+degree to which you have tested your solution.
+
+Within your repository, create a subdirectory named Tests, and in that
+directory create the set of files used to test your lab4.cl script -
+each file should contain just the L and N values to be used.
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 4 completed"
+   git push
+

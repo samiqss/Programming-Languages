@@ -1,0 +1,51 @@
+Sami Al-Qusus
+CSCI330
+Lab2 Test Results for different tests
+
+
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test1
+Please enter the values for L and N: 
+firstN of hello and there is: hello 
+lastN of hello and there is: hello 
+rotateN of hello and there is: hello 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test2
+Please enter the values for L and N: 
+firstN of (10 20 30) and 2 is: (10 20) 
+lastN of (10 20 30) and 2 is: (20 30) 
+rotateN of (10 20 30) and 2 is: (30 10 20) 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test3
+Please enter the values for L and N: 
+firstN of (10 20 30) and 4 is: (10 20 30) 
+lastN of (10 20 30) and 4 is: (10 20 30) 
+rotateN of (10 20 30) and 4 is: (20 30 10) 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test4
+Please enter the values for L and N: 
+firstN of (10 20 30) and 0 is: NIL 
+lastN of (10 20 30) and 0 is: NIL 
+rotateN of (10 20 30) and 0 is: (10 20 30) 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test5
+Please enter the values for L and N: 
+firstN of (10 20 30) and 1 is: (10) 
+lastN of (10 20 30) and 1 is: (30) 
+rotateN of (10 20 30) and 1 is: (20 30 10) 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test6
+Please enter the values for L and N: 
+firstN of (10 20 30) and 3 is: (10 20 30) 
+lastN of (10 20 30) and 3 is: (10 20 30) 
+rotateN of (10 20 30) and 3 is: (10 20 30) 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test7
+Please enter the values for L and N: 
+firstN of (foo) and 3 is: (foo) 
+lastN of (foo) and 3 is: (foo) 
+rotateN of (foo) and 3 is: (foo) 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test8
+Please enter the values for L and N: 
+firstN of 123 and 3 is: 123 
+lastN of 123 and 3 is: 123 
+rotateN of 123 and 3 is: 123 
+alqususs@otter:~/csci330/lab2$ ./lab2.cl<Tests/test9
+Please enter the values for L and N: 
+firstN of (10 20 30) and -1 is: NIL 
+lastN of (10 20 30) and -1 is: NIL 
+rotateN of (10 20 30) and -1 is: (10 20 30) 
+

@@ -1,0 +1,58 @@
+
+This README provides the specifications for the lab 6 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+Lab requirements:
+-----------------
+
+In lab 6 we are examining the runtime behaviour of C from the perspective of
+variable/constant scoping and lifetime.  A source code file (lab6.c) and makefile
+are provided.
+
+You are to compile and run the program, storing the results in file lab6.out, e.g.
+     ./lab6x  > lab6.out
+and then in file lab6.txt provide a written analysis of the results.
+
+The program creates a number of variables/constants using the name x, all of
+different scopes, and keeps track of where the variable/constant was stored
+in memory, what it's value was at the time, and then at various points in the
+program it displaces the memory addresses, original value, and the current value
+stored at that location in memory.
+
+(Global arrays addresses[] and values[] are used to keep track of this information,
+and function displayStatus prints the information to standard output.  The current
+value at an address is displayed in both decimal and hex, because sometimes the hex
+value can be revealing.)
+
+The goal of the lab is to study the lab6.c code and output, and speculate about what
+it reveals about where (in general) C stores global and local variables and constants,
+and how C implements its scoping rules.
+
+Of particular interest are conjectures/explanations for:
+   - how/why/when the current value of a recorded variable address changes*
+     from one call of displayStatus to the next, and what they reveal about
+     C's handling of scope
+   - any noticable patterns in the storage locations of paramaters, local variables,
+     globals, and constants
+   - cases where overlapping scopes are permitted versus where they are denied
+     (comments in the code indicate places where the compiler generates errors
+       on the attempted re-use of the name 'x')
+
+ *note that if a particular value changes multiple times in a row you do NOT need
+  to repeat the explanation each individual time
+
+While you are welcome/encouraged to read/study/google the workings of C and scope handling,
+the objective of this lab isn't to give me a recitation of what you've read elsewhere -
+it is for you to show you have thought about and understand what is revealed experimentally
+in the program and its behaviour.
+
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 6 completed"
+   git push
+
