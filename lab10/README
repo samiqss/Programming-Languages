@@ -1,0 +1,31 @@
+
+This README provides the specifications for the lab 10 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+
+Repository contents:
+--------------------
+  README - this file
+  template.cpp  - example of templated function pointer use in C++
+  lab10.cpp      - skeleton lab10 file for the C++ portion
+  makefile - to compile the .cpp and .c files listed
+
+Lab requirements:
+-----------------
+For this lab you'll be implementing a C++ version of apply:
+    a function that takes a function and data values as its
+    parameters, runs the function on the data values,
+    and returns the result.
+
+The required behaviour for the apply function is described in lab10.cpp,
+along with a short sample main routine to test it.
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 10 completed"
+   git push
+

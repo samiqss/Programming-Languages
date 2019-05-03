@@ -1,0 +1,36 @@
+
+This README provides the specifications for the lab 9 take home
+   exercise (which is due exactly 6 days after the start of your
+   registered lab session).
+
+
+Repository contents:
+--------------------
+  README - this file
+  template.cpp  - example of variadic functions in C++
+  lab9.cpp      - skeleton lab9 file for the C++ portion
+  varArgs.c     - example of variadic functions in C
+  lab9.c        - skeleton lab9 file for the C portion
+  makefile - to compile the .cpp and .c files listed
+
+Lab requirements:
+-----------------
+For this lab you'll be implementing functions that accept a variable number
+of parameters in two ways:
+  (1) using C stdarg macros (put your solution in lab9.c)
+  (2) using C++ templates   (put your solution in lab9.cpp)
+
+An example of each has been provided in the template.cpp and varArgs.c files
+  included in the repository, along with a makefile for all four files.
+
+The required behaviour for the variadic functions is described in lab9.c and lab9.cpp,
+along with a short sample main routine.
+
+Submitting
+----------
+Make sure you have added, committed, and pushed your completed work, e.g.
+
+   git add .
+   git commit -m "lab 9 completed"
+   git push
+

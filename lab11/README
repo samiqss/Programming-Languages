@@ -1,0 +1,23 @@
+
+Lab 11 overview:
+----------------
+
+This repository contains the files necessary to use smart pointers
+to maintain a pool of key-value pairs.
+
+The file pool.h contains the definition of a KVPair class (to hold a
+single key-value pair), as well as a Pool class, to maintain the
+collection of key-value pairs.  The implementations of the associated
+methods are provided in file pool.cpp, and a main routine using them
+is provided in file lab11.cpp.
+
+The objective of this lab is to modify the Pool class to make it
+a templated class - i.e. so it could be used as a pool of any type
+of class, rather than just a pool of KVPairs.
+
+You will need to modify pool.h and pool.cpp to create the templated class,
+and modify lab11.cpp to use the templated class correctly with the KVPairs.
+
+As always, be sure to do your git add/commit/push prior to the
+lab deadline.
+
